@@ -37,3 +37,6 @@ mediumdf = df[df['DIFFICULTY '] == 'Medium']
 harddf = df[df['DIFFICULTY '] == 'Hard']
 
 st.plotly_chart(px.bar(df.groupby('DIFFICULTY ')['# Design Days'].mean(), y='# Design Days', title='Average Design Days by Difficulty'))
+
+test = 0
+test2 = 1
