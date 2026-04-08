@@ -35,12 +35,12 @@ style = "normal"
 weight = 400
 
 [theme]
-primaryColor = "#bb3838ff"           # Warm, professional accent color
-backgroundColor = "#f4f3ed"        # Soft cream background - easy on the eyes
-secondaryBackgroundColor = "#ecebe3"  # Subtle contrast for cards/sections
-textColor = "#3d3a2a"             # Dark brown - readable but not harsh black
-linkColor = "#3d3a2a"             # Keep links consistent with text
-borderColor = "#d3d2ca"           # Gentle borders that define
+primaryColor = "#d42c2cff"           # Warm, professional accent color
+backgroundColor = "#ffffffff"        # Soft cream background - easy on the eyes
+secondaryBackgroundColor = "#ffffffff"  # Subtle contrast for cards/sections
+textColor = "#000000ff"             # Dark brown - readable but not harsh black
+linkColor = "#000000ff"             # Keep links consistent with text
+borderColor = "#000000ff"           # Gentle borders that define
 showWidgetBorder = true           # Clean widget definition
 baseRadius = "0.6rem"             # Subtle rounded corners - modern feel
 font = "SpaceGrotesk"             # Apply your custom font to body text
