@@ -35,7 +35,7 @@ style = "normal"
 weight = 400
 
 [theme]
-primaryColor = "#d42c2cff"           # Warm, professional accent color
+primaryColor = "#363a02ff"           # Warm, professional accent color
 backgroundColor = "#ffffffff"        # Soft cream background - easy on the eyes
 secondaryBackgroundColor = "#ffffffff"  # Subtle contrast for cards/sections
 textColor = "#000000ff"             # Dark brown - readable but not harsh black

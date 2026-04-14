@@ -17,4 +17,10 @@ def clean_data(df):
     df['Design Start Date'] = pd.to_datetime(df['Design Start Date'], errors='coerce')
     df['Design End Date'] = pd.to_datetime(df['Design End Date'], errors='coerce')
     df.sort_values(by=['Design Start Date','Design End Date'], inplace=True)
+    df["Quarter"] = df["Design Start Date"].dt.to_period('Q').astype(str)
     return df
+
+df = load_data(PT, 'Project Tracker', 4)
+df = clean_data(df)
+
+df.to_excel('data/output_4.14.26.xlsx', index=False)
