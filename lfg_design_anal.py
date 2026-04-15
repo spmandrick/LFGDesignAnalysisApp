@@ -10,7 +10,7 @@ LFG = "data/LFG-Logo-Black.png"
 st.title("LFG Design Analysis Dashboard")
 
 #df = load_data("data/LFG Project Tracker.xlsx", 'Project Tracker', 4)
-df = pd.read_excel("data/output_4.14.26.xlsx")
+df = pd.read_excel("data/output_4.15.26.xlsx")
 
 #st.write(df)
 
@@ -59,7 +59,7 @@ st.write("**Choose a time interval to filter by:**")
 
 start_date = st.date_input(
     "Time interval start date:",
-    value=date(2025, 12, 1),  # Default date
+    value=date(2025, 7, 1),  # Default date
     min_value=date(2024, 1, 1),  # Earliest selectable date
     max_value=date(2030, 12, 31),  # Latest selectable date
     format="MM/DD/YYYY"
