@@ -4,14 +4,15 @@ import streamlit as st
 
 PT = "data/LFG Project Tracker.xlsx"
 
-def load_data(data_path, sht_name='Sheet 1', header=1):
+def load_data(data_path, sht_name='Project Tracker', header=5):
     df = pd.read_excel(data_path, sheet_name=sht_name, header=header)
     return df
 
 def clean_data(df):
     df = df[df['Type'] == 'Switchboards']
-    df['Board'] = df['Equipment'].astype(str) + ' ' + df['Project Name'].astype(str)
+    df['Board'] = df.loc[:, 'Equipment'].astype(str) + ' ' + df.loc[:, 'Project Name'].astype(str)
     df = df[['Board', 'Project Name', 'Job #', 'Equipment', 'Description', 'QTY', 'Amps', 'LFG ENG', 'Design Start Date', 'Design End Date', '# Design Days', 'Difficulty']]
+    df = df[df['Design Start Date'].notna()]
     df = df[df['Design End Date'].notna()]
     df = df.replace({'Difficulty': {'Hard ': 'Hard', 'Medium ': 'Med', 'Easy ': 'Easy'}})
     df['Design Start Date'] = pd.to_datetime(df['Design Start Date'], errors='coerce')
@@ -23,4 +24,4 @@ def clean_data(df):
 df = load_data(PT, 'Project Tracker', 4)
 df = clean_data(df)
 
-df.to_excel('data/output_4.15.26.xlsx', index=False)
+df.to_excel('data/output_4.28.26.xlsx', index=False)
